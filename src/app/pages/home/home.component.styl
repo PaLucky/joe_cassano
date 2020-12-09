@@ -1,0 +1,144 @@
+.m
+  width 100%
+  height auto
+
+audio
+  background-color #95B9C7
+
+.wrap
+  background-color: black
+  display flex
+  justify-content center
+  align-items center
+  position relative
+
+.right
+.left
+  left 50%
+  position absolute
+  width 50%
+  transform translateX(-50%) scale(1)
+  @media only screen and (min-width: 720px)
+    width 25%
+    left:8%
+    transform scale(1)
+    opacity: 0;
+    &:hover
+      transform scale(1.1)
+    &.ready
+      opacity: 1;
+
+.left
+  top 50%
+  @media only screen and (min-width: 720px)
+    transition transform .25s ease-in-out, opacity 3s ease-in
+
+.right
+  top 20%
+  @media only screen and (min-width: 720px)
+    transition transform .25s ease-in-out, opacity 2s ease-in
+
+.hero
+  height calc(100vh - 150px) // TODO: Altezza header quando ci sarà
+  background-image url("../../../assets/joe.jpg")
+  background-repeat no-repeat
+  background-position 60% 0%
+  background-size cover
+  background-attachment scroll
+  @media only screen and (min-width: 720px)
+    margin 0
+    width 100%
+    background-position 100% 20%
+    transition transform .9s ease-in-out, opacity 3s ease-in
+    background-size cover
+    background-attachment fixed
+    opacity: 0;
+    height 100vh
+    &.ready
+      opacity: 1;
+
+.album
+  position relative
+  height 425px
+  overflow hidden
+  .ac
+    display flex
+    margin 0 auto
+  @media only screen and (min-width: 720px)
+    width 100%
+    display flex
+    height auto
+    flex-wrap wrap
+    justify-content space-between
+    .ac
+      width 80%
+      margin 0 auto
+.info
+.cover
+  width 100%
+  height auto
+  z-index 5
+  position absolute
+  @media only screen and (min-width: 720px)
+    position relative
+
+.cover
+  display block
+  background-image url("../../../assets/album.jpg")
+  height 400px
+  opacity: .5
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+  @media only screen and (min-width: 720px)
+    opacity: 1
+    height 500px
+    width  500px
+
+
+.info
+  z-index 10
+  flex 1
+  display flex
+  align-items center
+  ul
+    width 100%
+  li
+    padding .8em 0
+    font-size 1.1em
+    color rgba(gold, .50)
+    &:first-child
+      padding-top 0
+    &:last-child
+      padding-bottom 0
+  @media only screen and (min-width: 720px)
+    flex 1
+    li
+      padding 1em 0
+      font-size 1.35em
+
+.videos
+  .yt
+    display flex
+    flex-direction column
+    @media only screen and (min-width: 720px)
+      flex-wrap wrap
+      flex-direction row
+  iframe
+    width 100%
+    @media only screen and (min-width: 720px)
+      border 5px solid rgba(gold, .25)
+      margin 1rem auto
+      width 48%
+
+.inner
+  font-size: 2.2em
+  position: absolute
+  font-family: joe
+  left: 9%
+  top: 44%
+  color: #fff
+  opacity: 0
+  transition opacity 3s ease-in
+  &.ready
+    opacity: 1;

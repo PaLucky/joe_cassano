@@ -1,0 +1,53 @@
+header
+  position fixed
+  width 100%
+  z-index 100
+  height 150px;
+  background: linear-gradient(to bottom, #000000 , #030303); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+nav
+  height 100%
+  @media only screen and (min-width: 479px)
+    margin auto
+    padding 0 1rem
+    max-width 80%
+
+
+ul
+  width 100%
+  height 100%
+  display flex
+  justify-content space-between
+
+li
+  position relative
+  //text-shadow -1px -1px 0px red, 0px -1px 0px red, 1px -1px 0px red, -1px  0px 0px red, 1px  0px 0px red, -1px  1px 0px red, 0px  1px 0px red, 1px  1px 0px red;
+
+a
+  padding 0 1em
+  display flex
+  font-family joe
+  align-items center
+  color rgba(gold, .50)
+  top 0
+  height 100%
+  text-decoration none
+  font-size 1.1em
+  bottom 0
+  left 0
+  right 0
+  transition background-color .2s ease-in, font-size .2s ease-in
+  @media only screen and (min-width: 680px)
+    font-size 1.5em
+    &:hover
+      background-color rgba(#aaa,.15)
+      font-size 1.6em
+
+
+.special
+  padding: 1rem
+  a
+    margin 0 auto
+    padding 0
+  @media only screen and (min-width: 680px)
+    padding 6em

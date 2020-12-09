@@ -1,0 +1,56 @@
+main
+  margin-top 100px
+  flex 1 0 auto
+
+video
+  transition: opacity .9s ease
+.fade
+  display: none
+  opacity: 0
+  z-index: 0
+.l,.r
+  display none
+  top 50%
+  position absolute
+  z-index 8000
+  transform translate3D(0,0,0)
+
+.l
+  left 0
+  animation xS 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1)
+
+.r
+  right 0
+  animation xD 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1)
+
+.l:after
+.r:after
+  content ''
+  transform translate3D(0,0,0)
+  background-size cover
+  display block
+  width 100px
+  height 100px
+
+.l:after
+  background-image: url('../assets/pD.svg')
+  animation y 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64)
+
+.r:after
+  background-image: url('../assets/pS.svg')
+  animation y 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64)
+
+@keyframes y
+  50%
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1)
+    transform: translateY(-40vh)
+
+@keyframes xD
+  50%
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64)
+    transform translateX(-35vw) rotate(-25deg)
+
+@keyframes xS
+  50%
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64)
+    transform translateX(35vw) rotate(25deg)
